@@ -1,4 +1,4 @@
 distribdb
 =========
 
-Simple dsistributed database
+Simple distributed database
