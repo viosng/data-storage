@@ -1,15 +1,8 @@
-import org.apache.thrift.TException;
-import org.apache.thrift.TSerializer;
-import org.apache.thrift.protocol.TBinaryProtocol;
-import org.apache.thrift.protocol.TSimpleJSONProtocol;
-import org.apache.thrift.transport.TSocket;
-import org.apache.thrift.transport.TTransport;
-import org.apache.thrift.transport.TTransportException;
+package edu.viosng.distribdb;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
