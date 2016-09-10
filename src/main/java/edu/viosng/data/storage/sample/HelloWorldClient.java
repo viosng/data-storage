@@ -72,7 +72,7 @@ public class HelloWorldClient implements AutoCloseable {
      * Greet server. If provided, the first element of {@code args} is the name to use in the
      * greeting.
      */
-    public static void main(String[] args) throws Exception {
+    public static void main1(String[] args) throws Exception {
         try(HelloWorldClient client = new HelloWorldClient("localhost", 50051)) {
       /* Access a service running on the local machine on port 50051 */
             String user = "world";

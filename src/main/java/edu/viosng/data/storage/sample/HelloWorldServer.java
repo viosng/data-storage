@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
@@ -32,21 +33,17 @@ public class HelloWorldServer {
                 .build()
                 .start();
         logger.info("Server started, listening on " + port);
-        Runtime.getRuntime().addShutdownHook(new Thread() {
-            @Override
-            public void run() {
-                // Use stderr here since the logger may have been reset by its JVM shutdown hook.
-                System.err.println("*** shutting down gRPC server since JVM is shutting down");
-                HelloWorldServer.this.stop();
-                System.err.println("*** server shut down");
-            }
-        });
     }
 
+
+    @PreDestroy
     private void stop() {
+        // Use stderr here since the logger may have been reset by its JVM shutdown hook.
+        logger.error("*** shutting down gRPC server since JVM is shutting down");
         if (server != null) {
             server.shutdown();
         }
+        logger.error("*** server shut down");
     }
 
     private class GreeterImpl extends GreeterGrpc.GreeterImplBase {
