@@ -1,10 +1,10 @@
-package edu.viosng.obj.storage.sample;
+package edu.viosng.data.storage.sample;
 
+import edu.viosng.data.storage.example.GreeterGrpc;
+import edu.viosng.data.storage.example.HelloReply;
+import edu.viosng.data.storage.example.HelloRequest;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import io.grpc.examples.helloworld.GreeterGrpc;
-import io.grpc.examples.helloworld.HelloReply;
-import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.stub.StreamObserver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.viosng</groupId>
-    <artifactId>obj-storage</artifactId>
+    <artifactId>data-storage</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>ObjStorage</name>
-    <description>Simple distributed object storage, being developed for educational purposes</description>
+    <name>DataStorage</name>
+    <description>Simple distributed data storage, being developed for educational purposes</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -1,4 +1,4 @@
-package edu.viosng.obj.storage.config;
+package edu.viosng.data.storage.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-ObjStorage
+DataStorage
 =========
 
-Simple distributed object storage, being developed for educational purposes
+Simple distributed data storage, being developed for educational purposes

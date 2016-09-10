@@ -1,11 +1,11 @@
-package edu.viosng.obj.storage.sample;
+package edu.viosng.data.storage.sample;
 
+import edu.viosng.data.storage.example.GreeterGrpc;
+import edu.viosng.data.storage.example.HelloReply;
+import edu.viosng.data.storage.example.HelloRequest;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
-import io.grpc.examples.helloworld.GreeterGrpc;
-import io.grpc.examples.helloworld.HelloReply;
-import io.grpc.examples.helloworld.HelloRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
