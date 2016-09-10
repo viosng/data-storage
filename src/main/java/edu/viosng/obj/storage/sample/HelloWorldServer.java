@@ -1,4 +1,4 @@
-package edu.viosng.distribdb.sample;
+package edu.viosng.obj.storage.sample;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -8,13 +8,16 @@ import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.stub.StreamObserver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
 /**
  * Created by viosn_000 on 09.09.2016.
  */
+@Service
 public class HelloWorldServer {
     private static final Logger logger = LoggerFactory.getLogger(HelloWorldServer.class.getName());
 
@@ -22,6 +25,7 @@ public class HelloWorldServer {
     private int port = 50051;
     private Server server;
 
+    @PostConstruct
     private void start() throws IOException {
         server = ServerBuilder.forPort(port)
                 .addService(new GreeterImpl())
@@ -43,24 +47,6 @@ public class HelloWorldServer {
         if (server != null) {
             server.shutdown();
         }
-    }
-
-    /**
-     * Await termination on the main thread since the grpc library uses daemon threads.
-     */
-    private void blockUntilShutdown() throws InterruptedException {
-        if (server != null) {
-            server.awaitTermination();
-        }
-    }
-
-    /**
-     * Main launches the server from the command line.
-     */
-    public static void main(String[] args) throws IOException, InterruptedException {
-        final HelloWorldServer server = new HelloWorldServer();
-        server.start();
-        server.blockUntilShutdown();
     }
 
     private class GreeterImpl extends GreeterGrpc.GreeterImplBase {

@@ -1,4 +1,4 @@
-package edu.viosng.distribdb.sample;
+package edu.viosng.obj.storage.sample;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;

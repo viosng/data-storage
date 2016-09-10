@@ -1,4 +1,4 @@
-distribdb
+ObjStorage
 =========
 
-Simple distributed database
+Simple distributed object storage, being developed for educational purposes
